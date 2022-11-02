@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react'
 import { commands, events, Coin, MDS, Decimal } from 'npm-upload-9781'
 import { Send } from './Send'
 import { SendMulti } from './SendMulti'
+import { MaximaMessageSend } from './MaximMessageSend'
+import { TokenCreate } from './TokenCreate'
 
 MDS.DEBUG_HOST = '127.0.0.1'
-MDS.DEBUG_PORT = 10003
-MDS.DEBUG_MINIDAPPID = '0xB2EFB3C7F9AD93EB0800A9B64ADDBABA43DF2DE21267D0F836359EA046E89A2D'
+MDS.DEBUG_PORT = 9003
+MDS.DEBUG_MINIDAPPID = '0xFA1421F618A200D45CC8D3E5322B65EA4F1D87B91EBAE5787569FB2B7FF4F5E5'
 
 function App() {
     const [minimaBalance, setMinimaBalance] = useState('')
@@ -40,6 +42,8 @@ function App() {
 
             <Send></Send>
             <SendMulti></SendMulti>
+            <MaximaMessageSend></MaximaMessageSend>
+            <TokenCreate></TokenCreate>
         </div>
     )
 }
