@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react'
 import { commands, events, Coin, MDS, Decimal } from 'npm-upload-9781'
 import { Send } from './Send'
 import { SendMulti } from './SendMulti'
+import { SendBurn } from './SendBurn'
+import { SendSplit } from './SendSplit'
+import { SendDebug } from './SendDebug'
+import { SendDryrun } from './SendDryrun'
+import { SendPoll } from './SendPoll'
 import { MaximaMessageSend } from './MaximMessageSend'
 import { TokenCreate } from './TokenCreate'
 import { TokenCreateWithScript } from './TokenCreateWithScript'
@@ -17,12 +22,14 @@ function App() {
     useEffect(() => {
         // Decimal.js is used to handle floating point numbers
         Decimal.set({ precision: 60 })
+
         // initialize minima before calling any commands
         events.onInit(async () => {
             const balance = await commands.balance()
             const balanceString = JSON.stringify(balance, null, 2)
             setMinimaBalance(balanceString)
         })
+
         // dont't call MDS directly because we have commands, events and sql helpers,
         // but it's still there if you need an escape hatch
         MDS.init((event) => {
@@ -44,6 +51,11 @@ function App() {
 
             <Send></Send>
             <SendMulti></SendMulti>
+            <SendBurn></SendBurn>
+            <SendSplit></SendSplit>
+            <SendDebug></SendDebug>
+            <SendDryrun></SendDryrun>
+            <SendPoll></SendPoll>
             <MaximaMessageSend></MaximaMessageSend>
             <TokenCreate></TokenCreate>
             <TokenCreateWithScript></TokenCreateWithScript>
