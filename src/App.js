@@ -4,6 +4,8 @@ import { Send } from './Send'
 import { SendMulti } from './SendMulti'
 import { MaximaMessageSend } from './MaximMessageSend'
 import { TokenCreate } from './TokenCreate'
+import { TokenCreateWithScript } from './TokenCreateWithScript'
+import { SendToken } from './SendToken'
 
 MDS.DEBUG_HOST = '127.0.0.1'
 MDS.DEBUG_PORT = 9003
@@ -44,6 +46,8 @@ function App() {
             <SendMulti></SendMulti>
             <MaximaMessageSend></MaximaMessageSend>
             <TokenCreate></TokenCreate>
+            <TokenCreateWithScript></TokenCreateWithScript>
+            <SendToken></SendToken>
         </div>
     )
 }
