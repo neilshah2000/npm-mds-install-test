@@ -1,7 +1,7 @@
 import { commands, Decimal } from 'npm-upload-9781'
 
 export function Send() {
-    const address = 'MxG083A97TCZ82K0KEM1CP9SV2Q97EJM808J4J28YPCVZJRRU6YWPZHS2NQCY31'
+    const address = '0x365849093D1D03BF6ACAE846A4294D2826712B494E2442464408D6457211BC8A'
     const amount = new Decimal(0.001)
     const onSendClicked = () => {
         commands.send({ address, amount })

@@ -11,10 +11,11 @@ import { MaximaMessageSend } from './MaximMessageSend'
 import { TokenCreate } from './TokenCreate'
 import { TokenCreateWithScript } from './TokenCreateWithScript'
 import { SendToken } from './SendToken'
+import { TransactionCreateBuildPost } from './TransactionCreateBuildPost'
 
 MDS.DEBUG_HOST = '127.0.0.1'
 MDS.DEBUG_PORT = 9003
-MDS.DEBUG_MINIDAPPID = '0xFA1421F618A200D45CC8D3E5322B65EA4F1D87B91EBAE5787569FB2B7FF4F5E5'
+MDS.DEBUG_MINIDAPPID = '0x3A980648F812EA7DFAB8D44016A79084C193A441BE880ED39775960A703F26DB'
 
 function App() {
     const [minimaBalance, setMinimaBalance] = useState('')
@@ -60,6 +61,7 @@ function App() {
             <TokenCreate></TokenCreate>
             <TokenCreateWithScript></TokenCreateWithScript>
             <SendToken></SendToken>
+            <TransactionCreateBuildPost></TransactionCreateBuildPost>
         </div>
     )
 }
