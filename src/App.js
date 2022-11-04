@@ -7,10 +7,12 @@ import { SendSplit } from './SendSplit'
 import { SendDebug } from './SendDebug'
 import { SendDryrun } from './SendDryrun'
 import { SendPoll } from './SendPoll'
+import { MaximaMessageSend } from './MaximMessageSend'
+import { TokenCreate } from './TokenCreate'
 
 MDS.DEBUG_HOST = '127.0.0.1'
 MDS.DEBUG_PORT = 9003
-MDS.DEBUG_MINIDAPPID = '0xE72C2A95DEA447AC50CAA0FEDC3C3927FCD33EFB4368ED16AEDC89F70BE0124D'
+MDS.DEBUG_MINIDAPPID = '0xFA1421F618A200D45CC8D3E5322B65EA4F1D87B91EBAE5787569FB2B7FF4F5E5'
 
 function App() {
     const [minimaBalance, setMinimaBalance] = useState('')
@@ -52,6 +54,8 @@ function App() {
             <SendDebug></SendDebug>
             <SendDryrun></SendDryrun>
             <SendPoll></SendPoll>
+            <MaximaMessageSend></MaximaMessageSend>
+            <TokenCreate></TokenCreate>
         </div>
     )
 }
